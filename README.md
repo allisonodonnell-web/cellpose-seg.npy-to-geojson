@@ -4,7 +4,7 @@ Convert Cellpose segmentation outputs (_seg.npy) to GeoJSON for QuPath
 # set up a folder 
 ```python
 mkdir cellpose_geojson
-cd cellpose_geojson     ## -> Put your _seg.npy file into this folder
+cd cellpose_geojson```     ## -> Put your _seg.npy file into this folder
 
 # check it is there 
 ls 
