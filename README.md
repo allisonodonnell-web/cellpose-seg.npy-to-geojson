@@ -23,6 +23,7 @@ python -c "import numpy, shapely, skimage; print('OK')"
 nano seg_npy_to_geojson.py
 
 # paste everything below 
+'''python
 import numpy as np
 import json
 from skimage import measure
