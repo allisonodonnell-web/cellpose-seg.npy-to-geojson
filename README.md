@@ -1,28 +1,39 @@
-# cellpose-seg.npy-to-geojson
+# Cellpose-seg.npy-to-geojson
 Convert Cellpose segmentation outputs (_seg.npy) to GeoJSON for QuPath
 
-# set up a folder 
+# Set up a folder 
 ```python
 mkdir cellpose_geojson
-cd cellpose_geojson```     ## -> Put your _seg.npy file into this folder
+cd cellpose_geojson     ## -> Put your _seg.npy file into this folder
+```
 
-# check it is there 
+# Check it is there 
+```
 ls 
+```
 
-# create a python environment 
+# Create a python environment 
+```
 conda create -n cp_geojson python=3.10 -y
 conda activate cp_geojson
+```
 
-# install required packages 
+# Install required packages 
+```
 pip install numpy shapely scikit-image
+```
 
-# confirm installs
+# Confirm installs
+```
 python -c "import numpy, shapely, skimage; print('OK')"
+```
 
-# create the conversion script 
+# Create the conversion script 
+```
 nano seg_npy_to_geojson.py
+```
 
-# paste everything below 
+# Paste everything below 
 ```python
 import numpy as np
 import json
@@ -71,29 +82,45 @@ with open(OUTPUT_GEOJSON, "w") as f:
     json.dump(geojson, f)
 
 print(f"Exported {len(features)} objects → {OUTPUT_GEOJSON}")
+```
 
-# save and exit 
+# Save and exit 
+```
   # Ctrl + O = enter 
   # Ctrl + X
+```
 
-# edit the file name 
+# Edit the file name 
+```
 nano seg_npy_to_geojson.py
+```
 
-# Change: 
+# Change: to your actual file name 
+```
 INPUT_NPY = "your_file_seg.npy"
-
-# to your actual file name 
 INPUT_NPY = "sample_seg.npy"
-# save and exit again 
+```
 
-# run the script 
+# Save and exit again 
+
+# Run the script 
+```
 python seg_npy_to_geojson.py
+```
 
-# if successful you will see 
+# If successful you will see 
+```
 Exported 12345 objects → segmentation.geojson
+```
 
-# check the file exists 
+# Check the file exists 
+```
 ls 
+```
 
-## import into QuPath 
-## select segmentation.geojson
+## Import into QuPath 
+```
+File → Import Objects → GeoJSON
+```
+
+## Select segmentation.geojson
