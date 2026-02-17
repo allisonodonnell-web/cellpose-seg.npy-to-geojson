@@ -84,11 +84,8 @@ with open(OUTPUT_GEOJSON, "w") as f:
 print(f"Exported {len(features)} objects → {OUTPUT_GEOJSON}")
 ```
 
-# Save and exit 
-```
-  # Ctrl + O = enter 
-  # Ctrl + X
-```
+# Save and Exit: Ctrl + O, then enter 
+# Ctrl + X
 
 # Edit the file name 
 ```
