@@ -117,7 +117,7 @@ ls
 
 ## Import into QuPath 
 ```
-File → Import Objects → GeoJSON
+File → Import Objects from file → GeoJSON
 ```
 
 ## Select segmentation.geojson
